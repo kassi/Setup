@@ -14,6 +14,12 @@ fi
 echo "Installing Package Control"
 curl -s http://sublime.wbond.net/Package%20Control.sublime-package -o "$APPSUPPORT_PATH/Installed Packages/Package Control.sublime-package"
 
+if [[ ! -d "$DOTFILES/User" ]]; then
+  echo "Cloning personal SublimeText User repository"
+  cd "$DOTFILES"
+  git clone sublime-text-user User
+fi
+
 # Link to User repository inside Dotfiles
 if [[ -d "$APPSUPPORT_USERPATH" && ! -L "$APPSUPPORT_USERPATH" ]]; then
   rmdir "$APPSUPPORT_USERPATH"
