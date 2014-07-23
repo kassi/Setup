@@ -1,0 +1,20 @@
+# Update Homebrew and Homebrew cask
+update
+
+# Install Homebrew Cask
+tap caskroom/cask
+install brew-cask
+
+# Add support for alternate versions of Casks
+tap caskroom/versions
+
+# Install applications
+cask install dterm
+cask install github
+cask install google-chrome
+cask install java
+cask install p4merge
+cask install sequel-pro
+cask install sizeup
+cask install sourcetree
+cask install sublime-text3
