@@ -63,3 +63,5 @@ for i in $(cat "$DOTFILES/packages-own.txt"); do
   git clone $url $name
   ln -s "$OWN_PACKAGE_PATH/$name" "$APPSUPPORT_PATH/Packages/$name"
 done
+
+# https://github.com/grych/subl-handler
