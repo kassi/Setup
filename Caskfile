@@ -11,6 +11,7 @@ tap caskroom/versions
 # Install applications
 cask install dterm
 cask install github
+cask install glimmerblocker
 cask install google-chrome
 cask install java
 cask install p4merge
