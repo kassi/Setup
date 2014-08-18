@@ -17,4 +17,4 @@ cask install p4merge
 cask install sequel-pro
 cask install sizeup
 cask install sourcetree
-cask install sublime-text3
+cask install sublime-text-dev
