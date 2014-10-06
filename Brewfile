@@ -30,6 +30,7 @@ install gpg
 install htop-osx
 install imagemagick
 install mysql
+install libuv          # for powerline
 install node
 install openssl
 install phantomjs casperjs
