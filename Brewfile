@@ -32,7 +32,7 @@ install imagemagick
 install mysql
 install node
 install openssl
-install phantomjs
+install phantomjs casperjs
 install pstree
 install python
 install readline
