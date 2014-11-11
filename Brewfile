@@ -25,17 +25,29 @@ install ack
 install bash-completion
 install ctags
 install curl
-install git
-install hub
+install git hub
+install gpg
 install htop-osx
+install imagemagick
+install mysql
 install node
 install openssl
 install phantomjs
 install pstree
+install python
 install readline
+install reattach-to-user-namespace
+install tmux
+install uncrustify
 install watch
+install wget
+install xctool
 
 # Install special dev related tools
+install libidn
+install libuv
+install libyaml
+# install erlang
 # install ossp-uuid
 # install redis
 # install riak
