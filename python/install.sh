@@ -5,7 +5,6 @@
 rm ~/.pydistutils.cfg
 
 pip install bitbucket-cli
-pip install https://github.com/Lokaltog/powerline/tarball/develop
+pip install git+git://github.com/Lokaltog/powerline
 pip install psutil
-pip install pyuv
-
+pip install git+git://github.com/saghul/pyuv@v0.10
