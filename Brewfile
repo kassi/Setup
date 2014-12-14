@@ -25,10 +25,11 @@ install ack
 install bash-completion
 install ctags
 install curl
-install git hub
+install git hub gist
 install gpg
 install htop-osx
 install imagemagick
+install mongodb
 install mysql
 install libuv          # for powerline
 install node
@@ -40,6 +41,7 @@ install readline
 install reattach-to-user-namespace
 install tmux
 install uncrustify
+install wakeonlan
 install watch
 install wget
 install xctool
