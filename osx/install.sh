@@ -52,3 +52,11 @@ defaults write com.apple.Terminal "Startup Window Settings" Monokai
 # Show images and names in group chats
 defaults write com.apple.iChat SOTranscriptSettingsDefaultGroupChatSettingsPreferences -dict-add participantDisplay -int 2
 defaults write com.apple.iChat SOTranscriptSettingsDefaultGroupChatSettingsPreferences -dict-add transcriptStyleID "com.apple.iChat.Styles.Boxes"
+
+IDETextKeyBindingSet=/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist
+sudo /usr/libexec/PlistBuddy -c "Add :Customized dict" $IDETextKeyBindingSet
+sudo /usr/libexec/PlistBuddy -c "Add ':Customized:Delete Line' string" $IDETextKeyBindingSet
+sudo /usr/libexec/PlistBuddy -c "Set ':Customized:Delete Line' 'moveToEndOfLine:, deleteToBeginningOfLine:, deleteToEndOfParagraph:'" $IDETextKeyBindingSet
+sudo /usr/libexec/PlistBuddy -c "Add ':Customized:Duplicate Line' string" $IDETextKeyBindingSet
+sudo /usr/libexec/PlistBuddy -c "Set ':Customized:Duplicate Line' 'selectLine:, deleteToEndOfParagraph:, yank:, moveToLeftEndOfLine:, yank:'" $IDETextKeyBindingSet
+
