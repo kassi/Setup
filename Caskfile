@@ -14,6 +14,7 @@ cask install dterm
 cask install github
 cask install glimmerblocker
 cask install google-chrome
+cask install hipchat
 cask install java
 cask install p4merge
 cask install seil
