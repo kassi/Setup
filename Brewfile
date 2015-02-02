@@ -35,6 +35,7 @@ install libuv          # for powerline
 install node
 install openssl
 install phantomjs casperjs
+install pow
 install pstree
 install python
 install readline
