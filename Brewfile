@@ -40,6 +40,7 @@ install pstree
 install python
 install readline
 install reattach-to-user-namespace
+install ssh-copy-id
 install tmux
 install uncrustify
 install wakeonlan
