@@ -1,64 +1,103 @@
-# Install command-line tools using Homebrew
-# Usage: `brew bundle Brewfile`
-
-# Make sure we're using the latest Homebrew
-update
-
-# Upgrade any already-installed formulae
-upgrade
+# Usage:
+#   brew tap Homebrew/bundle
+#   brew bundle
 
 # Install GNU utilities (without prefixes)
 # Those that come with OS X are outdated
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-install coreutils # --default-names
-install findutils # --default-names
-
-# Install wget with IRI support
-install wget --enable-iri
+brew "coreutils"
+brew "findutils" #, args: ["with-default-names"]
 
 # Install more recent versions of some OS X tools
-tap homebrew/dupes
-# install homebrew/dupes/rsync
+tap "homebrew/dupes"
+# brew homebrew/dupes/rsync
+
+# Install dependencies
+brew "automake"
+brew "makedepend"
+brew "pkg-config"
+brew "openssl"
+brew "readline"
+
+# Install Libraries other bottles may depend on
+brew "icu4c"
+brew "jpeg"
+brew "libgcrypt"
+brew "libidn"
+brew "libpng"
+brew "libtiff"
+brew "librsvg"
+brew "libssh2"
+brew "libtool"
+brew "libuv" # for powerline
+brew "libyaml"
+
+cask "xquartz"
+
+# Install languages other bottles may depend on
+brew "python"
+brew "python3"
 
 # Install more tools
-install ack
-install bash-completion
-install ctags
-install curl
-install git hub gist
-install gpg
-install htop-osx
-install imagemagick
-install mongodb
-install mysql
-install libuv          # for powerline
-install node
-install openssl
-install phantomjs casperjs
-install pow
-install pstree
-install python
-install readline
-install reattach-to-user-namespace
-install ssh-copy-id
-install tmux
-install uncrustify
-install wakeonlan
-install watch
-install wget
-install xctool
+brew "ack"
+brew "bash-completion"
+brew "cask-repair"
+brew "ctags"
+# brew "curl"
+brew "fontconfig"
+brew "webp"
+brew "freetype"
+brew "git"
+brew "hub"
+brew "gist"
+brew "gd"
+brew "gnupg"
+brew "gpg-agent"
+brew "graphviz"
+brew "htop-osx"
+brew "imagemagick"
+brew "lua51"
+brew "mongodb"
+brew "mscgen"
+brew "mysql"
+brew "node"
+brew "casperjs"
+brew "chromedriver"
+brew "phantomjs"
+brew "pow"
+brew "pstree"
+brew "reattach-to-user-namespace"
+brew "ssh-copy-id"
+brew "tmux"
+brew "vim", args: ["with-gettext", "without-python", "with-python3"]
+brew "wakeonlan"
+brew "watch"
+# Install wget with IRI support
+brew "wget", args: ["enable-iri"]
+brew "xctool"
 
 # Install special dev related tools
-install libidn
-install libuv
-install libyaml
-# install erlang
-# install ossp-uuid
-# install redis
-# install riak
+# brew "erlang"
+# brew "elixir"
+brew "memcached"
+# brew ossp-uuid
+# brew redis
+# brew riak
 
-# Remove outdated versions from the cellar
-cleanup
+cask "alfred"
+cask "caffeine"
+cask "dash"
+cask "docker"
+cask "dterm"
+cask "firefoxdeveloperedition"
+cask "gpgtools"
+cask "hammerspoon"
+cask "java"
+cask "p4merge"
+cask "seil"
+cask "vagrant"
+cask "virtualbox"
+cask "virtualbox-extension-pack"
 
-# Check if installation is successfully
-doctor
+mas "Quiver"
+
