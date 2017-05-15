@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+SCRIPT_PATH=$(dirname $(grealpath $0))
 
 if [[ ! "$(type -P brew)" ]]; then
   info "Installing Homebrew"
@@ -6,4 +7,4 @@ if [[ ! "$(type -P brew)" ]]; then
 fi
 
 brew tap Homebrew/bundle
-brew bundle
+brew bundle "$SCRIPT_PATH/../data/Brewfile"

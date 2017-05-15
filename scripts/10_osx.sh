@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # set system defaults
 
 # Dock
@@ -50,8 +51,8 @@ defaults write com.apple.Terminal "Default Window Settings" Monokai
 defaults write com.apple.Terminal "Startup Window Settings" Monokai
 
 # Show images and names in group chats
-defaults write com.apple.iChat SOTranscriptSettingsDefaultGroupChatSettingsPreferences -dict-add participantDisplay -int 2
-defaults write com.apple.iChat SOTranscriptSettingsDefaultGroupChatSettingsPreferences -dict-add transcriptStyleID "com.apple.iChat.Styles.Boxes"
+# defaults write com.apple.iChat SOTranscriptSettingsDefaultGroupChatSettingsPreferences -dict-add participantDisplay -int 2
+# defaults write com.apple.iChat SOTranscriptSettingsDefaultGroupChatSettingsPreferences -dict-add transcriptStyleID "com.apple.iChat.Styles.Boxes"
 
 IDETextKeyBindingSet=/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist
 sudo /usr/libexec/PlistBuddy -c "Add :Customized dict" $IDETextKeyBindingSet

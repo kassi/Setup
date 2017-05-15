@@ -1,14 +1,15 @@
-#!/bin/bash
-
-DOTFILES=$(dirname $(grealpath $0))
+#!/usr/bin/env bash
+SCRIPT_PATH=$(dirname $(grealpath $0))
+DATA_PATH=$(dirname $SCRIPT_PATH)/data
+DOTFILES=$(dirname $(dirname $SCRIPT_PATH))
 OWN_PACKAGE_PATH="$HOME/Projects/Sublime Text"
 APPSUPPORT_PATH="$HOME/Library/Application Support/Sublime Text 3"
 APPSUPPORT_USERPATH="$APPSUPPORT_PATH/Packages/User"
 
 # Quit Sublime Text 3
-if [ -n "$(ps x | grep -v grep | grep 'Sublimes Text.app')" ]; then
-  echo "Sublime Text is running. Please quit before continuing"
-  exit 1
+while [ -n "$(ps x | grep -v grep | grep 'Sublime Text.app')" ]; do
+  echo "Sublime Text is running. Please quit before continuing. Press any key to continue: "
+  read -n 1
 fi
 
 echo "Installing Package Control"
@@ -48,7 +49,7 @@ git checkout Preferences.sublime-settings
 # Add additional (old) packages from sources
 
 cd "$APPSUPPORT_PATH/Packages"
-for url in $(cat "$DOTFILES/packages-additional.txt"); do
+for url in $(cat "$DATA_PATH/sublime-packages-additional.txt"); do
   git clone $url
 done
 
@@ -57,7 +58,7 @@ done
 mkdir -p "$OWN_PACKAGE_PATH"
 cd "$OWN_PACKAGE_PATH"
 
-for i in $(cat "$DOTFILES/packages-own.txt"); do
+for i in $(cat "$DATA_PATH/sublime-packages-own.txt"); do
   name=${i%=*}
   url=${i#*=}
   git clone $url $name

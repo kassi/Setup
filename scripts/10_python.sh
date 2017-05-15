@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This file causes problems with pip
 # trying to install in to /lib or /Library
