@@ -2,10 +2,10 @@
 
 # This file causes problems with pip
 # trying to install in to /lib or /Library
-rm ~/.pydistutils.cfg
+rm -f ~/.pydistutils.cfg
 
-pip install bitbucket-cli
-pip install powerline-tools
+pip3 install bitbucket-cli
+pip3 install powerline-status psutil
 # pyparsing wheel
 
 # appdirs (1.4.3)

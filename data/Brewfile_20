@@ -1,0 +1,65 @@
+# Install more tools
+brew "ack"
+brew "bash-completion"
+# brew "cask-repair"
+brew "ctags"
+# brew "curl"
+brew "fontconfig"
+brew "webp"       # used by gd
+brew "freetype"   # used by gd
+brew "git"
+brew "hub"
+brew "gist"
+brew "gd"
+brew "mas"
+brew "lua51"
+
+brew "gpg-agent"
+brew "graphviz"
+brew "htop-osx"
+brew "imagemagick"
+brew "mongodb"
+brew "mscgen"
+brew "mysql"
+brew "node"
+brew "casperjs"
+brew "chromedriver"
+brew "phantomjs"
+brew "pow"
+brew "pstree"
+brew "reattach-to-user-namespace"
+brew "ssh-copy-id"
+brew "tmux"
+brew "vim", args: ["with-gettext", "without-python", "with-python3"]
+brew "wakeonlan"
+brew "watch"
+brew "wget", args: ["enable-iri"]
+brew "xctool"
+
+# Install special dev related tools
+# brew "erlang"
+# brew "elixir"
+brew "memcached"
+# brew ossp-uuid
+# brew redis
+# brew riak
+
+cask "alfred"
+cask "caffeine"
+cask "dash"
+cask "docker"
+cask "dterm"
+cask "gpgtools"
+cask "hammerspoon"
+cask "java"
+cask "p4merge"
+cask "seil"
+cask "vagrant"
+# cask "screenflick"
+# cask "virtualbox"
+# cask "virtualbox-extension-pack"
+
+mas "Flycut", id: 442160987
+mas "Keynote", id: 409183694
+mas "Quiver", id: 866773894
+mas "The Unarchiver", id: 425424353

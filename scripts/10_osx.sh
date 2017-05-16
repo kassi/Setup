@@ -16,9 +16,9 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 2
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -int 0
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -int 0
 # Remap Focus to next window to CMD-^
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{enabled = 0; value = { parameters = (65535, 10, 1048576); type = ‘standard’; }; }"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{enabled = 0; value = { parameters = (65535, 10, 1048576); type = 'standard'; }; }"
 # Disable Show/Hide Dock
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 52 "{enabled = 0; value = { parameters = (100, 2, 1572864); type = ‘standard’; }; }"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 52 "{enabled = 0; value = { parameters = (100, 2, 1572864); type = 'standard'; }; }"
 
 # App Shortcuts
 defaults write com.apple.Chrome NSUserKeyEquivalents -dict-add "N\\U00e4chsten Tab ausw\\U00e4hlen" "@\\U00e4"
