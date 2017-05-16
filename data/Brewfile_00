@@ -30,6 +30,7 @@ brew "libssh2"
 brew "libtool"
 brew "libuv" # for powerline
 brew "libyaml"
+brew "gnupg"
 
 cask "xquartz"
 
