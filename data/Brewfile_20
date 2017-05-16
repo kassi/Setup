@@ -56,6 +56,7 @@ cask "hammerspoon"
 cask "java"
 cask "p4merge"
 # cask "seil" # doesn't work on 10.12
+# Seil used to remap CapsLock to 109 = F10 (for tmux/vim)
 cask "vagrant"
 # cask "screenflick"
 # cask "virtualbox"
