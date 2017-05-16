@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SCRIPT_PATH=$(dirname $(grealpath $0))
+SCRIPT_PATH=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
 
 if [[ ! "$(type -P brew)" ]]; then
   info "Installing Homebrew"
@@ -7,4 +7,5 @@ if [[ ! "$(type -P brew)" ]]; then
 fi
 
 brew tap Homebrew/bundle
-brew bundle "$SCRIPT_PATH/../data/Brewfile"
+brew bundle --global
+exit
