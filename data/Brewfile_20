@@ -34,6 +34,8 @@ brew "vim", args: ["with-gettext", "without-python", "with-python3"]
 brew "wakeonlan"
 brew "watch"
 brew "wget", args: ["enable-iri"]
+
+mas "Xcode", id: 497799835
 brew "xctool"
 
 # Install special dev related tools
@@ -53,11 +55,12 @@ cask "gpgtools"
 cask "hammerspoon"
 cask "java"
 cask "p4merge"
-cask "seil"
+# cask "seil" # doesn't work on 10.12
 cask "vagrant"
 # cask "screenflick"
 # cask "virtualbox"
 # cask "virtualbox-extension-pack"
+cask "caskroom/drivers/synology-cloud-station-drive"
 
 mas "Flycut", id: 442160987
 mas "Keynote", id: 409183694
