@@ -7,4 +7,4 @@ if [[ ! "$(type -P brew)" ]]; then
 fi
 
 brew tap Homebrew/bundle
-brew bundle --path=$(dirname $SCRIPT_PATH)/data/Brewfile_00
+brew bundle --file=$(dirname $SCRIPT_PATH)/data/Brewfile_00
