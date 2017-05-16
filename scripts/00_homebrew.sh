@@ -8,4 +8,3 @@ fi
 
 brew tap Homebrew/bundle
 brew bundle --global
-exit

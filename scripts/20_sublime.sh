@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SCRIPT_PATH=$(dirname $(grealpath $0))
+SCRIPT_PATH=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
 DATA_PATH=$(dirname $SCRIPT_PATH)/data
 DOTFILES=$(dirname $(dirname $SCRIPT_PATH))
 OWN_PACKAGE_PATH="$HOME/Projects/Sublime Text"
