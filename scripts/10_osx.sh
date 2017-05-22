@@ -21,14 +21,16 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{ena
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 52 "{enabled = 0; value = { parameters = (100, 2, 1572864); type = 'standard'; }; }"
 
 # App Shortcuts
-defaults write com.apple.Chrome NSUserKeyEquivalents -dict-add "N\\U00e4chsten Tab ausw\\U00e4hlen" "@\\U00e4"
-defaults write com.apple.Chrome NSUserKeyEquivalents -dict-add "Vorherigen Tab ausw\\U00e4hlen" "@\\U00f6"
+defaults write com.google.Chrome NSUserKeyEquivalents -dict-add "N\\U00e4chsten Tab ausw\\U00e4hlen" "@\\U00e4"
+defaults write com.google.Chrome NSUserKeyEquivalents -dict-add "Vorherigen Tab ausw\\U00e4hlen" "@\\U00f6"
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "N\\U00e4chsten Tab anzeigen" "@\\U00e4"
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "Vorherigen Tab anzeigen" "@\\U00f6"
 defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "N\\U00e4chsten Tab ausw\\U00e4hlen" "@\\U00e4"
 defaults write com.apple.Terminal NSUserKeyEquivalents -dict-add "Vorherigen Tab ausw\\U00e4hlen" "@\\U00f6"
 defaults write com.cisco.Jabber NSUserKeyEquivalents -dict-add "N\\U00e4chste Registerkarte ausw\\U00e4hlen" "@\\U00e4"
 defaults write com.cisco.Jabber NSUserKeyEquivalents -dict-add "Vorherige Registerkarte ausw\\U00e4hlen" "@\\U00f6"
+defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Zoom" "@~m"
+defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Zoomen" "@~m"
 
 # Mouse
 defaults write NSGlobalDomain AppleEnableMouseSwipeNavigateWithScrolls -int 1
