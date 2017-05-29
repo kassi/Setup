@@ -32,6 +32,7 @@ brew "libuv" # for powerline
 brew "libyaml"
 brew "gnupg"
 brew "boost"
+brew "ossp-uuid"
 
 cask "xquartz"
 
