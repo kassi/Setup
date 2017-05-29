@@ -33,6 +33,7 @@ brew "libyaml"
 brew "gnupg"
 brew "boost"
 brew "ossp-uuid"
+brew "zeromq"
 
 cask "xquartz"
 
