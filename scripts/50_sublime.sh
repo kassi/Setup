@@ -26,11 +26,11 @@ done
 echo "Installing Package Control"
 curl -s http://sublime.wbond.net/Package%20Control.sublime-package -o "$APPSUPPORT_PATH/Installed Packages/Package Control.sublime-package"
 
-if [[ ! -d "$DOTFILES/User" ]]; then
+while [[ ! -d "$DOTFILES/User" ]]; do
   echo "Cloning personal SublimeText User repository"
   cd "$DOTFILES"
   hub clone sublime-text-user User
-fi
+done
 
 # Link to User repository inside Dotfiles
 if [[ -d "$APPSUPPORT_USERPATH" && ! -L "$APPSUPPORT_USERPATH" ]]; then
