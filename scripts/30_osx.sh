@@ -72,3 +72,5 @@ $PlistBuddy -c "Add ':ShortcutRecorder mainHotkey:modifierFlags' integer" "$HOME
 $PlistBuddy -c "Set ':ShortcutRecorder mainHotkey:modifierFlags' 1572864" "$HOME/Library/Application Support/Flycut/com.generalarcade.flycut.plist"
 $PlistBuddy -c "Set ':loadOnStartup' true" "$HOME/Library/Application Support/Flycut/com.generalarcade.flycut.plist"
 $PlistBuddy -c "Set ':removeDuplicates' true" "$HOME/Library/Application Support/Flycut/com.generalarcade.flycut.plist"
+$PlistBuddy -c "Set ':savePreference' 2" "$HOME/Library/Application Support/Flycut/com.generalarcade.flycut.plist"
+$PlistBuddy -c "Set ':skipPasswordFields' true" "$HOME/Library/Application Support/Flycut/com.generalarcade.flycut.plist"
