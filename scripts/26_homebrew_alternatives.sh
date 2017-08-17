@@ -1,5 +1,12 @@
 # download from https://github.com/tekezo/Karabiner-Elements
 
+if [[ ! -e /Library/Mail/Bundles/GPGMail.mailbundle ]]; then
+  wget -P $HOME/Downloads https://releases.gpgtools.org/GPG_Suite-2017.1b3-v2.dmg
+  open $HOME/Downloads/GPG_Suite-2017.1b3-v2.dmg
+  while [[ ! -f "/Volumes/GPG Suite/Install.pkg" ]]; do sleep 1; done
+  open "/Volumes/GPG Suite/Install.pkg"
+fi
+
 if [[ ! -e /Applications/Karabiner-Elements.app ]]; then
   wget -P $HOME/Downloads https://pqrs.org/latest/karabiner-elements-latest.dmg
   open $HOME/Downloads/karabiner-elements-latest.dmg
