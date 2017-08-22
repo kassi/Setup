@@ -3,9 +3,27 @@
 
 # Dock
 defaults write com.apple.Dock tilesize -integer 48
+
 # Active corners: top right enabled screen saver
+# Possible values:
+#  0: no-op
+#  2: Mission Control (all windows)
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+#
+# Top right corner: screen saver, nothing else
 defaults write com.apple.Dock wvous-tr-corner -int 5
 defaults write com.apple.Dock wvous-tr-modifier -int 0
+defaults write com.apple.Dock wvous-tl-corner -int 0
+defaults write com.apple.Dock wvous-br-corner -int 0
+defaults write com.apple.Dock wvous-bl-corner -int 0
+#
 killall Dock
 
 # Keyboard
@@ -21,6 +39,7 @@ defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 27 "{ena
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 52 "{enabled = 0; value = { parameters = (100, 2, 1572864); type = 'standard'; }; }"
 
 # App Shortcuts
+# I'm used to hit CMD-Ö/CMD-Ä on a german keyboard
 defaults write com.google.Chrome NSUserKeyEquivalents -dict-add "N\\U00e4chsten Tab ausw\\U00e4hlen" "@\\U00e4"
 defaults write com.google.Chrome NSUserKeyEquivalents -dict-add "Vorherigen Tab ausw\\U00e4hlen" "@\\U00f6"
 defaults write com.apple.Safari NSUserKeyEquivalents -dict-add "N\\U00e4chsten Tab anzeigen" "@\\U00e4"
