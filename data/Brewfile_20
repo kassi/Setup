@@ -16,7 +16,7 @@ brew "lua51"
 
 brew "gpg-agent"
 brew "graphviz"
-brew "htop-osx"
+brew "htop"
 brew "imagemagick"
 brew "mongodb"
 brew "mscgen"
