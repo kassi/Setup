@@ -11,11 +11,15 @@ brew cleanup
 
 # Python
 set -e
-pip install --upgrade pip setuptools
-pip list | cut -d ' ' -f 1 | xargs pip3 install --upgrade
+if [ $(which pip) ]; then
+  pip install --upgrade pip setuptools
+  pip list | cut -d ' ' -f 1 | xargs pip3 install --upgrade
+fi
 
-pip3 install --upgrade pip setuptools wheel
-pip3 list | cut -d ' ' -f 1 | xargs pip3 install --upgrade
+if [ $(which pip3) ]; then
+  pip3 install --upgrade pip setuptools wheel
+  pip3 list | cut -d ' ' -f 1 | xargs pip3 install --upgrade
+fi
 
 # Ruby
 rvm version | grep latest && echo "rvm seems to be up to date" || rvm get stable
