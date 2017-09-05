@@ -1,4 +1,16 @@
 #!/usr/bin/env bash
+SCRIPT_PATH=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
+
+# copy services since they can't be linked
+for service in $(dirname $SCRIPT_PATH)/data/*.workflow; do
+  service_name=$(basename "$service")
+  echo "SERVICE: $service"
+  echo "SERVICE: $service_name"
+  if [ ! -d "$HOME/Library/Services/$service_name" ]; then
+    cp -a "$service" "$HOME/Library/Services/"
+  fi
+done
+
 # set system defaults
 
 # Dock
@@ -93,3 +105,5 @@ $PlistBuddy -c "Set ':loadOnStartup' true" "$HOME/Library/Application Support/Fl
 $PlistBuddy -c "Set ':removeDuplicates' true" "$HOME/Library/Application Support/Flycut/com.generalarcade.flycut.plist"
 $PlistBuddy -c "Set ':savePreference' 2" "$HOME/Library/Application Support/Flycut/com.generalarcade.flycut.plist"
 $PlistBuddy -c "Set ':skipPasswordFields' true" "$HOME/Library/Application Support/Flycut/com.generalarcade.flycut.plist"
+
+
