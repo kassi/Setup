@@ -8,18 +8,10 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Datum (DE) einfügen</string>
+				<string>Aktuelles Datum einfügen</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>
-			<key>NSReturnTypes</key>
-			<array>
-				<string>public.utf8-plain-text</string>
-			</array>
-			<key>NSSendTypes</key>
-			<array>
-				<string>public.utf8-plain-text</string>
-			</array>
 		</dict>
 	</array>
 </dict>
