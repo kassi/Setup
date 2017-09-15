@@ -3,6 +3,7 @@ brew "xctool"
 # Install special dev related tools
 # brew "erlang"
 # brew "elixir"
+brew "go"
 brew "memcached"
 # brew ossp-uuid
 # brew redis
