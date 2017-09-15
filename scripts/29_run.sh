@@ -1,4 +1,5 @@
 #!/bin/bash
+open "/Applications/Docker.app"
 open "/Applications/Alfred 3.app"
 open "/Applications/Flycut.app"
 open "/Applications/Hammerspoon.app"
