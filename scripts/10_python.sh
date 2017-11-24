@@ -6,6 +6,7 @@ rm -f ~/.pydistutils.cfg
 
 pip3 install bitbucket-cli
 pip3 install powerline-status psutil
+pip3 install Pygments
 # pyparsing wheel
 
 # appdirs (1.4.3)
