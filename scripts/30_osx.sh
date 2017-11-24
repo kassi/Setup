@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 SCRIPT_PATH=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
 
-PListBuddy=/usr/libexec/PlistBuddy
+PlistBuddy=/usr/libexec/PlistBuddy
 
 IDETextKeyBindingSet=/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist
 sudo $PlistBuddy -c "Add :Customized dict" $IDETextKeyBindingSet
