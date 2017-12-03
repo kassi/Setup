@@ -14,6 +14,9 @@ brew "gd"
 brew "mas"
 brew "lua51"
 
+brew tap icalialabs/formulae
+brew install plis
+
 brew "gpg-agent"
 brew "graphviz"
 brew "htop"
