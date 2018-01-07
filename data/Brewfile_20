@@ -17,6 +17,7 @@ brew "lua51"
 brew tap icalialabs/formulae
 brew install plis
 
+brew "fswatch"
 brew "gpg-agent"
 brew "graphviz"
 brew "htop"
