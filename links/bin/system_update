@@ -1,5 +1,12 @@
 #!/bin/bash
 
+versionfile=$HOME/.system_update-osversion
+# read system version since last run
+last_sw_version=$(cat $versionfile 2>/dev/null)
+
+# determine current version
+current_sw_version=$(sw_vers | grep ProductVersion | cut -d $'\t' -f 2)
+
 # Homebrew
 set -e
 brew update -v
@@ -10,19 +17,24 @@ brew upgrade
 brew cleanup
 
 # Python
+if [ $(which pyenv) ]; then
+  pyenv init - > $HOME/System/Dotfiles/links/.bash.d/40_python_bash_profile
+fi
+
 set -e
 if [ $(which pip) ]; then
   pip install --upgrade pip setuptools
-  pip list | cut -d ' ' -f 1 | xargs pip3 install --upgrade
+  pip list | sed '1,2d' | cut -d ' ' -f 1 | xargs pip install --upgrade
 fi
 
 if [ $(which pip3) ]; then
   pip3 install --upgrade pip setuptools wheel
-  pip3 list | cut -d ' ' -f 1 | xargs pip3 install --upgrade
+  pip3 list | sed '1,2d' | cut -d ' ' -f 1 | xargs pip3 install --upgrade
 fi
 
 # Ruby
 rvm version | grep latest && echo "rvm seems to be up to date" || rvm get stable
+rvm reload
 ruby -e ' \
   known=`rvm list known_strings | grep ^ruby-[[:digit:]]`.split;
   inst=`rvm list | grep ruby- | cut -d " " -f 2`.split;
@@ -37,3 +49,11 @@ ruby -e ' \
     puts newer
   end
 '
+
+if [[ $last_sw_version != $current_sw_version ]]; then
+  # OS update took place
+  rvm reinstall all --force
+fi
+
+# write current system version
+echo $current_sw_version > $versionfile
