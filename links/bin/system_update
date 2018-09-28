@@ -14,7 +14,8 @@ brew outdated
 
 set +e
 brew upgrade
-brew cleanup
+brew cleanup -s
+brew cask cleanup
 
 # Python
 if [ $(which pyenv) ]; then
@@ -23,13 +24,13 @@ fi
 
 set -e
 if [ $(which pip) ]; then
-  pip install --upgrade pip setuptools
-  pip list | sed '1,2d' | cut -d ' ' -f 1 | xargs pip install --upgrade
+  pip install --upgrade -q pip setuptools
+  pip list --format=freeze | cut -d '=' -f 1 | xargs pip install --upgrade -q
 fi
 
 if [ $(which pip3) ]; then
-  pip3 install --upgrade pip setuptools wheel
-  pip3 list | sed '1,2d' | cut -d ' ' -f 1 | xargs pip3 install --upgrade
+  pip3 install --upgrade -q pip setuptools wheel
+  pip3 list --format=freeze | cut -d '=' -f 1 | xargs pip3 install --upgrade -q
 fi
 
 # Ruby

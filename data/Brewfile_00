@@ -34,6 +34,5 @@ brew "zeromq"
 cask "xquartz"
 
 # Install languages other bottles may depend on
-brew "python"
-brew "python3"
-
+brew "python@2"
+# brew "python3"
