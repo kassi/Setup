@@ -3,7 +3,7 @@ brew "xctool"
 # Install special dev related tools
 # brew "erlang"
 # brew "elixir"
-brew "go"
+# brew "go"
 brew "memcached"
 # brew ossp-uuid
 # brew redis
@@ -19,11 +19,12 @@ cask "java"
 cask "p4merge"
 # cask "seil" # doesn't work on 10.12
 # Seil used to remap CapsLock to 109 = F10 (for tmux/vim)
-cask "vagrant"
+# cask "vagrant"
 # cask "screenflick"
 # cask "virtualbox"
 # cask "virtualbox-extension-pack"
 cask "caskroom/drivers/synology-cloud-station-drive"
+cask "visual-studio-code"
 
 mas "Flycut", id: 442160987
 mas "Keynote", id: 409183694
