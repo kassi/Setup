@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+exit # no perl anymore
 
 # Install perlbrew
 if [[ ! "$(type -P perlbrew)" ]]; then
