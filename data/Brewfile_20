@@ -35,7 +35,7 @@ brew "pstree"
 brew "reattach-to-user-namespace"
 brew "ssh-copy-id"
 brew "tmux"
-brew "vim", args: ["with-gettext", "with-python@2"]
+brew "vim", args: ["with-gettext", "without-python"]
 brew "wakeonlan"
 brew "watch"
 brew "wget", args: ["enable-iri"]
