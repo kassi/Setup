@@ -15,7 +15,6 @@ brew outdated
 set +e
 brew upgrade
 brew cleanup -s
-brew cask cleanup
 
 # Python
 if [ $(which pyenv) ]; then
