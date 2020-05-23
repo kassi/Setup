@@ -8,6 +8,7 @@ tap "homebrew/dupes"
 
 # Install dependencies
 brew "automake"
+brew "autoconf"
 brew "makedepend"
 brew "pkg-config"
 brew "openssl@1.1"
@@ -25,14 +26,23 @@ brew "libtiff"
 brew "libssh2"
 brew "libtool"
 brew "libuv" # for powerline
+brew "libxslt"
 brew "libyaml"
+brew "memcached"
 brew "gnupg"
 brew "boost"
 brew "ossp-uuid"
+brew "unixodbc"
 brew "zeromq"
+
+# Install tools other tools depend on
+brew "curl"
+brew "unzip"
 
 cask "xquartz"
 
 # Install languages other bottles may depend on
-# brew "python@2"
-# brew "python3"
+brew "node", args: ["without-npm"]
+brew "python@2"
+brew "python"
+brew "asdf"

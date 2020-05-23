@@ -1,9 +1,7 @@
 # Install more tools
 brew "ack"
 brew "bash-completion"
-# brew "cask-repair"
 brew "ctags"
-# brew "curl"
 brew "fontconfig"
 brew "webp"       # used by gd
 brew "freetype"   # used by gd
@@ -24,18 +22,16 @@ brew "htop"
 brew "imagemagick"
 brew "mongodb"
 brew "mscgen"
-brew "mysql"
-brew "nvm"
-brew "node", args: ["without-npm"]
+brew "mysql@5.7"
 brew "casperjs"
 brew "chromedriver"
 brew "phantomjs"
-brew "pow"
+# brew "pow"
 brew "pstree"
 brew "reattach-to-user-namespace"
 brew "ssh-copy-id"
 brew "tmux"
-brew "vim", args: ["with-gettext", "without-python"]
+brew "vim", args: ["with-gettext"]
 brew "wakeonlan"
 brew "watch"
 brew "wget", args: ["enable-iri"]

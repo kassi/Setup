@@ -1,24 +1,25 @@
 brew "xctool"
 
-# Install special dev related tools
-# brew "erlang"
-# brew "elixir"
-# brew "go"
-brew "memcached"
-# brew ossp-uuid
-# brew redis
-# brew riak
-
+# Install casks
+cask "1password"
 cask "alfred"
+cask "blender"
 cask "caffeine"
+cask "charles"
+cask "chromedriver"
+cask "colloquy"
 cask "dash"
 cask "docker"
-cask "gpgtools"
+cask "font-hack-nerd-font"
+cask "font-source-code-pro"
+cask "google-chrome"
+cask "gpg-suite"
 cask "hammerspoon"
+cask "iterm2"
 cask "java"
-cask "p4merge"
-# cask "seil" # doesn't work on 10.12
-# Seil used to remap CapsLock to 109 = F10 (for tmux/vim)
+cask "owncloud"
+cask "quickhue"
+cask "sourcetree"
 # cask "vagrant"
 # cask "screenflick"
 # cask "virtualbox"
