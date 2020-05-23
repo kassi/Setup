@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 exit # no perl anymore
 
 # Install perlbrew
