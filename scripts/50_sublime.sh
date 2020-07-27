@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+
+exit
+# Not using sublime anymore
+
 SCRIPT_PATH=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
 DATA_PATH=$(dirname $SCRIPT_PATH)/data
 DOTFILES=$(dirname $(dirname $SCRIPT_PATH))
