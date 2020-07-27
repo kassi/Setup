@@ -19,18 +19,29 @@ brew cleanup -s
 # Python
 if [ $(which pyenv) ]; then
   pyenv init - > $HOME/System/Dotfiles/links/.bash.d/40_python_bash_profile
+
+  for versions in $(pyenv versions); do
+    echo $version
+  done
 fi
 
 set -e
-if [ $(which pip) ]; then
-  pip install --upgrade -q pip setuptools
-  pip list --format=freeze | cut -d '=' -f 1 | xargs pip install --upgrade -q
-fi
+for venv in \
+  $(pyenv versions | egrep "^  3\.\d+\.\d+$" | sort -V | tail -1) \
+  $(pyenv versions | egrep "^  2\.\d+\.\d+$" | sort -V | tail -1) \
+  tools3 tools2; do
+  # echo $venv
+done
 
-if [ $(which pip3) ]; then
-  pip3 install --upgrade -q pip setuptools wheel
-  pip3 list --format=freeze | cut -d '=' -f 1 | xargs pip3 install --upgrade -q
-fi
+# if [ $(which pip) ]; then
+#   pip install --upgrade -q pip setuptools
+#   pip list --format=freeze | cut -d '=' -f 1 | xargs pip install --upgrade -q
+# fi
+
+# if [ $(which pip3) ]; then
+#   pip3 install --upgrade -q pip setuptools wheel
+#   pip3 list --format=freeze | cut -d '=' -f 1 | xargs pip3 install --upgrade -q
+# fi
 
 # Ruby
 rvm version | grep latest && echo "rvm seems to be up to date" || rvm get stable
