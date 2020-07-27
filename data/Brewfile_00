@@ -7,13 +7,13 @@ tap "homebrew/dupes"
 # brew homebrew/dupes/rsync
 
 # Install dependencies
+brew "coreutils"
 brew "automake"
 brew "autoconf"
 brew "makedepend"
+brew "openssl"
 brew "pkg-config"
-brew "openssl@1.1"
 brew "readline"
-brew "coreutils"
 brew "findutils" #, args: ["with-default-names"]
 
 # Install Libraries other bottles may depend on
