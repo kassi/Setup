@@ -1,0 +1,147 @@
+# Search tool like grep, but optimized for programmers
+brew "ack"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Get/set bluetooth power and discoverable state
+brew "blueutil"
+# Control Google Chrome from the command-line
+brew "chrome-cli"
+# Reimplementation of ctags(1)
+brew "ctags"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Nice banner output
+brew "figlet"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Distributed revision control system
+brew "git"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Improved top (interactive process viewer)
+brew "htop"
+# Add GitHub support to git on the command-line
+brew "gh"
+# Add GitLab support to git on the command-line
+brew "glab"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Keep your Mac's application settings in sync
+brew "mackup"
+# Creates dependencies in makefiles
+brew "makedepend"
+# Mac App Store command-line interface
+brew "mas"
+# Move, copy, append, and link multiple files
+brew "mmv"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+x# Show ps output as a tree
+brew "pstree"
+# Tool to create intelligent and beautiful documentation
+brew "sphinx-doc"
+#
+brew "ssh-copy-id"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# For several quick edits
+brew "vim", args: ["with-gettext"]
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# For some scripts that require wget
+brew "wget", args: ["enable-iri"]
+
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
+# Application launcher and productivity software
+cask "alfred"
+# API documentation browser and code snippet manager
+cask "dash"
+# App to build and share containerized applications and microservices
+cask "docker"
+cask "font-anonymice-nerd-font"
+cask "font-fira-code-nerd-font"
+cask "font-hack-nerd-font"
+cask "font-source-code-pro"
+# Web browser
+cask "brave-browser"
+# Web browser
+cask "google-chrome"
+# Tools to protect your emails and files
+cask "gpg-suite"
+# Desktop automation application
+cask "hammerspoon"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Keyboard customizer
+cask "karabiner-elements"
+# Provides access to camera controls
+cask "logitech-camera-settings"
+# Software for Logitech devices
+cask "logitech-options"
+# Collaboration platform for API development
+cask "postman"
+# Integrated development environment focused entirely on AppleScript
+cask "script-debugger"
+# Graphical client for Git version control
+cask "sourcetree"
+# Open-source code editor
+cask "visual-studio-code"
+
+# 'mas install'
+mas "1Password for Safari", id: 1569813296
+mas "Flycut", id: 442160987
+mas "Free Ruler", id: 1483172210
+mas "Slack", id: 803453959
+mas "Tampermonkey", id: 1482490089
+mas "Xcode", id: 497799835
+
+vscode "adpyke.codesnap"
+vscode "albymor.increment-selection"
+vscode "aliariff.auto-add-brackets"
+vscode "britesnow.vscode-toggle-quotes"
+vscode "clemenspeters.format-json"
+vscode "deerawan.vscode-dash"
+vscode "dlech.chmod"
+vscode "dnicolson.binary-plist"
+vscode "eamodio.gitlens"
+vscode "formulahendry.code-runner"
+vscode "foxundermoon.shell-format"
+vscode "inu1255.easy-snippet"
+vscode "lourenci.go-to-spec"
+vscode "mohsen1.prettify-json"
+vscode "morrislaptop.vscode-open-in-sourcetree"
+vscode "mousetraps.selected-character-count"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.autopep8"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "oderwat.indent-rainbow"
+vscode "pascalreitermann93.vscode-yaml-sort"
+vscode "pkief.material-icon-theme"
+vscode "redhat.vscode-yaml"
+vscode "sleistner.vscode-fileutils"
+vscode "stevensona.character-count"
+vscode "tamasfe.even-better-toml"
+vscode "virgilsisoe.hammerspoon"
+vscode "wilsonsio.color-vision"
+vscode "zaaack.markdown-editor"

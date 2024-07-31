@@ -1,3 +1,0 @@
-GitExt=git@github.com:kassi/sublime-text-2-gitext.git
-GuardHelpers=git@github.com:kassi/sublime-text-2-guard-helpers.git
-XMPFilter=git@github.com:kassi/sublime-text-2-xmpfilter.git

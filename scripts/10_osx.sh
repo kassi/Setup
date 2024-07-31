@@ -1,8 +1,5 @@
-#!/usr/bin/env bash
-SCRIPT_PATH=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
-
 # copy services since they can't be linked
-for service in $(dirname $SCRIPT_PATH)/data/*.workflow; do
+for service in $DATA_PATH/*.workflow; do
   service_name=$(basename "$service")
   echo "SERVICE: $service"
   echo "SERVICE: $service_name"
