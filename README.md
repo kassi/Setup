@@ -8,7 +8,7 @@ My personal machine setup, optimized for an osx development machine.
 
 ## Installation
 
-    /bin/bash -c "$(curl -fsSL https://raw.github.com/kassi/Setup/master/install.sh)"
+    /bin/bash -lc "$(curl -fsSL https://raw.github.com/kassi/Setup/master/install.sh)"
 
 ## Author
 
