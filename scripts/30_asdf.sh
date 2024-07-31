@@ -29,11 +29,11 @@ nodejs_latest=$(asdf list-all nodejs | tail -1)
 asdf install nodejs $nodejs_latest
 asdf global nodejs $nodejs_latest
 
-python_latest=$(asdf list-all python | grep ^3\. | grep -v dev | tail -1)
+python_latest=$(asdf list-all python | egrep "^[0-9\.]+$" | tail -1)
 asdf install python $python_latest
 asdf global python $python_latest
 
-ruby_latest=$(asdf list-all ruby | grep ^3\. | tail -1)
+ruby_latest=$(asdf list-all ruby | egrep "^[0-9\.]+$" | tail -1)
 asdf install ruby $ruby_latest
 asdf global ruby $ruby_latest
 
