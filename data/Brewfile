@@ -1,3 +1,13 @@
+# First install apps that require password
+# Tools to protect your emails and files
+cask "gpg-suite"
+# Keyboard customizer
+cask "karabiner-elements"
+# Provides access to camera controls
+cask "logitech-camera-settings"
+# Software for Logitech devices
+cask "logitech-options"
+
 # Search tool like grep, but optimized for programmers
 brew "ack"
 # Manage compile and link flags for libraries
@@ -85,18 +95,10 @@ cask "font-source-code-pro"
 cask "brave-browser"
 # Web browser
 cask "google-chrome"
-# Tools to protect your emails and files
-cask "gpg-suite"
 # Desktop automation application
 cask "hammerspoon"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Keyboard customizer
-cask "karabiner-elements"
-# Provides access to camera controls
-cask "logitech-camera-settings"
-# Software for Logitech devices
-cask "logitech-options"
 # Collaboration platform for API development
 cask "postman"
 # Integrated development environment focused entirely on AppleScript
@@ -105,14 +107,17 @@ cask "script-debugger"
 cask "sourcetree"
 # Open-source code editor
 cask "visual-studio-code"
+# MAS alternatives for other apple ids
+cask "slack"
+cask "flycut"
 
 # 'mas install'
-mas "1Password for Safari", id: 1569813296
-mas "Flycut", id: 442160987
-mas "Free Ruler", id: 1483172210
-mas "Slack", id: 803453959
-mas "Tampermonkey", id: 1482490089
-mas "Xcode", id: 497799835
+# mas "1Password for Safari", id: 1569813296
+# mas "Flycut", id: 442160987
+# mas "Free Ruler", id: 1483172210
+# mas "Slack", id: 803453959
+# mas "Tampermonkey", id: 1482490089
+# mas "Xcode", id: 497799835
 
 vscode "adpyke.codesnap"
 vscode "albymor.increment-selection"
