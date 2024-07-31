@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 set -euo pipefail
 # set -e # Exit immediately on error
 # set -u # Exit on undefined variables
@@ -12,7 +12,7 @@ DATA_PATH=$DESTINATION_PATH/data
 SCRIPT_PATH=$DESTINATION_PATH/scripts
 ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 
-# TODO: if iTerm is running, warn and exit
+pgrep -qf iTerm && { echo "ERROR: iTerm must not be running! Please restart command from standard Terminal."; exit 1; }
 
 # Need a valid ssh key to clone
 ssh_private_key=
