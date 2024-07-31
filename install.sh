@@ -7,10 +7,12 @@ set -euo pipefail
 
 echo "Setting up your Mac"
 
-DESTINATION_PATH=$ICLOUD_PATH/System/Setup
+DESTINATION_PATH=$HOME/System/Setup
 DATA_PATH=$DESTINATION_PATH/data
 SCRIPT_PATH=$DESTINATION_PATH/scripts
 ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+
+# TODO: if iTerm is running, warn and exit
 
 # Need a valid ssh key to clone
 ssh_private_key=
