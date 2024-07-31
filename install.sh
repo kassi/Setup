@@ -21,6 +21,7 @@ oppose_running() {
 
 echo "Setting up your Mac"
 
+[[ "$1" == "-f" ]] && FORCE=-f || FORCE=
 DESTINATION_PATH=$HOME/System/Setup
 DATA_PATH=$DESTINATION_PATH/data
 SCRIPT_PATH=$DESTINATION_PATH/scripts
@@ -46,13 +47,13 @@ else
 fi
 
 if [[ ! -d $DESTINATION_PATH ]]; then
-  read -p "Press ENTER to clone repo" < /dev/tty
+  [[ -n $FORCE ]] || read -p "Press ENTER to clone repo" < /dev/tty
   echo "Cloning into $DESTINATION_PATH."
   git clone git@github.com:kassi/Setup "$DESTINATION_PATH"
 fi
 
 for file in $SCRIPT_PATH/*.sh; do
-  read -p "Press ENTER to run $(basename $file)" < /dev/tty
+  [[ -n $FORCE ]] || read -p "Press ENTER to run $(basename $file)" < /dev/tty
   source $file
 done
 
