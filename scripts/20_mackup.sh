@@ -17,4 +17,4 @@ oppose_running "Alfred" 1
 oppose_running "Brave Browser"
 oppose_running "Dash" 1
 
-mackup restore
+mackup --force restore
