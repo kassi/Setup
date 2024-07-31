@@ -34,7 +34,7 @@ fi
 if [[ ! -d $DESTINATION_PATH ]]; then
   read -p "Press ENTER to clone repo" < /dev/tty
   echo "Cloning into $DESTINATION_PATH."
-  git clone git@github.com:kassi/Mackup $DESTINATION_PATH
+  git clone git@github.com:kassi/Setup $DESTINATION_PATH
 fi
 
 for file in $SCRIPT_PATH/*.sh; do
