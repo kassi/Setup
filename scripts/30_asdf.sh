@@ -4,6 +4,7 @@
 
 if [[ -z $(which asdf) ]]; then exit; fi
 
+asdf plugin-add direnv
 asdf plugin-add elixir
 asdf plugin-add erlang
 asdf plugin-add golang
