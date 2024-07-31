@@ -21,7 +21,7 @@ oppose_running() {
 
 echo "Setting up your Mac"
 
-[[ "$1" == "-f" ]] && FORCE=-f || FORCE=
+[[ "${1-}" == "-f" ]] && FORCE=-f || FORCE=
 DESTINATION_PATH=$HOME/System/Setup
 DATA_PATH=$DESTINATION_PATH/data
 SCRIPT_PATH=$DESTINATION_PATH/scripts
