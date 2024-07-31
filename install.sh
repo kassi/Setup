@@ -12,7 +12,7 @@ oppose_running() {
       exit 1
     fi
     if [[ -n ${2-} ]]; then
-      pkill "$1"
+      pkill -9 "$1"
     else
       read -p "ERROR: $1 must not be running! Press ENTER to continue" < /dev/tty
     fi

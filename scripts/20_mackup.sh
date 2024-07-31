@@ -16,5 +16,11 @@ ln -s $DATA_PATH/mackup $HOME/.mackup
 oppose_running "Alfred" 1
 oppose_running "Brave Browser"
 oppose_running "Dash" 1
+oppose_running "Flycut" 1
+oppose_running "Hammerspoon" 1
+
+open -a "Brave Browser" http://localhost
+pkill -9 "Brave Browser"
+cp "$ICLOUD_PATH/System/Sync/Brave/Preferences.init" "$HOME/Library/Application Support/BraveSoftware/Brave-Browser/Default/Preferences"
 
 mackup $FORCE restore
