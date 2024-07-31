@@ -38,7 +38,7 @@ if [[ ! -d $DESTINATION_PATH ]]; then
 fi
 
 for file in $SCRIPT_PATH/*.sh; do
-  read -p "Press ENTER to run " $(basename $file) < /dev/tty
+  read -p "Press ENTER to run $(basename $file)" < /dev/tty
   source $file
 done
 
