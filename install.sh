@@ -11,7 +11,7 @@ oppose_running() {
       echo "ERROR: $1 must not be running! Please restart command from standard Terminal."
       exit 1
     fi
-    if [[ -n $2 ]]; then
+    if [[ -n ${2-} ]]; then
       pkill "$1"
     else
       read -p "ERROR: $1 must not be running! Press ENTER to continue" < /dev/tty
