@@ -52,6 +52,8 @@ brew "gh"
 brew "glab"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Needed for ruby compilation
+brew "libpq"
 # Keep your Mac's application settings in sync
 brew "mackup"
 # Creates dependencies in makefiles
