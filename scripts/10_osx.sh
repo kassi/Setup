@@ -81,5 +81,7 @@ defaults write com.apple.Terminal "Default Window Settings" Monokai
 defaults write com.apple.Terminal "Startup Window Settings" Monokai
 
 # disable ip v6 - gpg doesn't find keyserver with it
-networksetup -setv6off Ethernet
-networksetup -setv6off Wi-Fi
+# set +o pipefail
+# networksetup -listallnetworkservices | grep Ethernet && networksetup -setv6off Ethernet
+# set -o pipefail
+# networksetup -setv6off Wi-Fi
