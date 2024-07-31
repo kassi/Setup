@@ -75,7 +75,7 @@ brew "vim", args: ["with-gettext"]
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # For some scripts that require wget
-brew "wget", args: ["enable-iri"]
+brew "wget"
 
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
