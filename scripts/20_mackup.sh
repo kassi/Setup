@@ -12,4 +12,9 @@ read -p "Press ENTER to restore mackup files" < /dev/tty
 [[ -e $HOME/.mackup ]] && rm -rf $HOME/.mackup
 ln -s $DATA_PATH/mackup.cfg $HOME/.mackup.cfg
 ln -s $DATA_PATH/mackup $HOME/.mackup
+
+oppose_running "Alfred" 1
+oppose_running "Brave Browser"
+oppose_running "Dash" 1
+
 mackup restore

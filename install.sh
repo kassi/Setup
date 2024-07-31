@@ -5,6 +5,20 @@ set -euo pipefail
 # set -x # Print commands and their arguments as they are executed
 # set -o pipefail # Exit on failures in piped commands.
 
+oppose_running() {
+  while pgrep -qf "$1"; do
+    if [[ $1 == iTerm && $TERM_PROGRAM == "iTerm.app" ]]; then
+      echo "ERROR: $1 must not be running! Please restart command from standard Terminal."
+      exit 1
+    fi
+    if [[ -n $2 ]]; then
+      pkill "$1"
+    else
+      read -p "ERROR: $1 must not be running! Press ENTER to continue" < /dev/tty
+    fi
+  done
+}
+
 echo "Setting up your Mac"
 
 DESTINATION_PATH=$HOME/System/Setup
@@ -12,7 +26,7 @@ DATA_PATH=$DESTINATION_PATH/data
 SCRIPT_PATH=$DESTINATION_PATH/scripts
 ICLOUD_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 
-pgrep -qf iTerm && { echo "ERROR: iTerm must not be running! Please restart command from standard Terminal."; exit 1; }
+oppose_running iTerm
 
 # Need a valid ssh key to clone
 ssh_private_key=
