@@ -54,6 +54,9 @@ brew "glab"
 brew "jq"
 # Needed for ruby compilation
 brew "libpq"
+# Lua for hammerspoon libraries
+brew "lua"
+brew "luarocks"
 # Keep your Mac's application settings in sync
 brew "mackup"
 # Creates dependencies in makefiles

@@ -43,6 +43,8 @@ asdf global ruby $ruby_latest
 direnv_latest=$(asdf list-all direnv | grep -v rc | tail -1)
 asdf install direnv $direnv_latest
 asdf global direnv $direnv_latest
+asdf direnv setup
 
-asdf install lua 5.4.6 # Hammerspoon
-asdf global lua 5.4.6
+# lua_latest=$(asdf list-all lua | egrep "^[0-9\.]+$" | tail -1)
+# asdf install lua $lua_latest
+# asdf global lua $lua_latest
