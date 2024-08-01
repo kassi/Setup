@@ -22,6 +22,10 @@ oppose_running "Hammerspoon" 1
 open -a "Brave Browser" http://localhost
 pkill -9 "Brave Browser"
 cp "$ICLOUD_PATH/System/Sync/Brave/Preferences.init" "$HOME/Library/Application Support/BraveSoftware/Brave-Browser/Default/Preferences"
+cp "$ICLOUD_PATH/System/Sync/com.googlecode.iterm2.plist" $HOME/Library/Preferences
 cp "$ICLOUD_PATH/System/Sync/com.kapeli.dashdoc.plist" $HOME/Library/Preferences
+# Tell iTerm2 to use the synced preferences
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$ICLOUD_PATH/System/Sync/iTerm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 mackup $FORCE restore
