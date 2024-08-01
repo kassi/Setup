@@ -22,5 +22,6 @@ oppose_running "Hammerspoon" 1
 open -a "Brave Browser" http://localhost
 pkill -9 "Brave Browser"
 cp "$ICLOUD_PATH/System/Sync/Brave/Preferences.init" "$HOME/Library/Application Support/BraveSoftware/Brave-Browser/Default/Preferences"
+cp "$ICLOUD_PATH/System/Sync/com.kapeli.dashdoc.plist" $HOME/Library/Preferences
 
 mackup $FORCE restore

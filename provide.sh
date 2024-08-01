@@ -40,4 +40,7 @@ cp $SETUP_PATH/install.sh $ICLOUD_SYSTEM_PATH
 [[ -d $ICLOUD_SYSTEM_PATH/Sync/Brave ]] || mkdir $ICLOUD_SYSTEM_PATH/Sync/Brave
 jq '{extensions: .extensions}' "$HOME/Library/Application Support/BraveSoftware/Brave-Browser/Default/Preferences" > $ICLOUD_SYSTEM_PATH/Sync/Brave/Preferences.init
 
+# Dash preferences can't be symlinked.
+cp $HOME/Library/Preferences/com.kapeli.dashdoc.plist $ICLOUD_SYSTEM_PATH/Sync
+
 mackup backup
