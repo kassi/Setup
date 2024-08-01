@@ -30,10 +30,12 @@ nodejs_latest=$(asdf list-all nodejs | tail -1)
 asdf install nodejs $nodejs_latest
 asdf global nodejs $nodejs_latest
 
-brew ls --versions openssl@1.1 >/dev/null && brew uninstall openssl@1.1
 python_latest=$(asdf list-all python | egrep "^[0-9\.]+$" | tail -1)
-asdf install python $python_latest
-asdf global python $python_latest
+asdf list python $python_latest || {
+  brew ls --versions openssl@1.1 >/dev/null && brew uninstall openssl@1.1
+  asdf install python $python_latest
+  asdf global python $python_latest
+}
 
 brew install openssl@1.1
 ruby_latest=$(asdf list-all ruby | egrep "^[0-9\.]+$" | tail -1)
