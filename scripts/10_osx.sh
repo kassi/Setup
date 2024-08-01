@@ -11,7 +11,7 @@ done
 # set system defaults
 
 # Dock
-defaults write com.apple.Dock tilesize -integer 48
+defaults write com.apple.Dock tilesize -integer 58
 
 # Active corners: top right enabled screen saver
 # Possible values:
